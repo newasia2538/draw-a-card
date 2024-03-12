@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CARD DECK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>My turn, draw !</h1>
+    </div>
+    <form method="GET">
+        <input class="button" type="submit" value="new deck" formaction="/new" value="GET" />
+        <input class="button" type="submit" value="shuffle" formaction="/shuffle" value="GET"/>
+        <input class="button" type="submit" value="draw a card" formaction="/draw" value="GET"/>
+    </form>
+    <div class="card">
+        <% if (!locals.deck_id) { %>
+            <h1> You have no any deck let's create a NEW deck or random SHUFFLE deck first.</h1>
+        <%} else if(locals.cards && locals.deck_id) { %>
+            <% locals.cards.forEach(card => { %>
+                <img src=<%= card.image %> />
+                <h2> <%= card.value %> of <%= card.suit %> </h2>
+            <% })%>               
+        <% } else{ %>
+            <img src="https://deckofcardsapi.com/static/img/back.png" />
+        <% } %>
+    </div>
+    <% if (locals.remaining && locals.deck_id) { %>
+        <h3>
+            Deck ID : <%= locals.deck_id %>
+        </h3>
+        <h3> Remainings : <%= locals.remaining %> </h3>
+    <% } %>
+</body>
+<footer>
+    Copyright © 2024 | All rights reserved.
+</footer>
+</html>

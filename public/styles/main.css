@@ -1,0 +1,115 @@
+body{
+    width:100%;
+    height:100%;
+    background-color:#DFF5FF;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    margin: auto auto 2vh auto;
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+footer{
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    height: 3vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color:#378CE7;
+}
+
+.header{
+    font-size: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.card{
+    font-size: 2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+
+    margin:3vh;
+}
+
+.button {
+  appearance: button;
+  background-color: #FFD23F;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 2vh 5vh;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button:main,
+.button:focus {
+  user-select: auto;
+}
+
+.button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button:disabled {
+  cursor: auto;
+}
+
+.button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
