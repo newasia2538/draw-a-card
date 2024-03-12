@@ -23,6 +23,6 @@ simple SHUFFLE and DRAW a card to play any game you want.
 
 ## Related
 
-Here are some related projects
+Thanks you for 
 
-[Deck of Cards API](https://deckofcardsapi.com/)
+- [Deck of Cards API](https://deckofcardsapi.com/)
